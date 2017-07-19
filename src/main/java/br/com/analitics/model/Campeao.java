@@ -26,7 +26,7 @@ import br.com.analitics.abstracts.AbstractEntity;
 @NamedQueries({
 	@NamedQuery(name="Campeao.findAll", query="SELECT i FROM Campeao i"),
 	@NamedQuery(name="Campeao.findById", query="SELECT i FROM Campeao i WHERE i.id = :id")})
-public class Campeao  extends AbstractEntity {
+public class Campeao extends AbstractEntity {
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

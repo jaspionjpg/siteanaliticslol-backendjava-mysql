@@ -7,6 +7,17 @@
 		<class>br.com.analitics.model.Item</class>
 		<class>br.com.analitics.model.ItemRecomendadoCampeao</class>
 		<class>br.com.analitics.model.Passiva</class>
+		<class>br.com.analitics.model.Campeonato</class>
+		<class>br.com.analitics.model.EstatisticaJogador</class>
+		<class>br.com.analitics.model.EstatisticaTime</class>
+		<class>br.com.analitics.model.Feitico</class>
+		<class>br.com.analitics.model.Jogador</class>
+		<class>br.com.analitics.model.Jogo</class>
+		<class>br.com.analitics.model.Mastery</class>
+		<class>br.com.analitics.model.RedeSocial</class>
+		<class>br.com.analitics.model.Serie</class>
+		<class>br.com.analitics.model.Time</class>
+		
 		
 		<exclude-unlisted-classes>false</exclude-unlisted-classes>
 		
