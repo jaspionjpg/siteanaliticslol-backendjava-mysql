@@ -16,7 +16,7 @@ import javax.persistence.TemporalType;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-import br.com.analitics.abstracts.AbstractEntity;
+import br.com.analitics.utils.AbstractEntity;
 
 @Entity
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})

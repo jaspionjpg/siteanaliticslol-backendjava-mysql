@@ -1,4 +1,4 @@
-package br.com.analitics.abstracts;
+package br.com.analitics.utils;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
