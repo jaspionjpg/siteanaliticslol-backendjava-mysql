@@ -3,7 +3,7 @@ package br.com.analitics.controller;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
-import br.com.analitics.utils.ResourceException;
+import br.com.analitics.utils.exception.ResourceException;
 import br.com.analitics.vo.ErrorVO;
 
 @org.springframework.web.bind.annotation.ControllerAdvice

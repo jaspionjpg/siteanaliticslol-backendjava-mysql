@@ -10,8 +10,13 @@
 		</layout>
 	</appender>
 	
+	<logger name="org.hibernate.stat">
+    	<level value="DEBUG" />
+    	<appender-ref ref="FILE"/>
+	</logger>
+	
 	<!-- Application Loggers -->
-	<logger name="com.journaldev.spring">
+	<logger name="br.com.analitics">
 		<level value="info" />
 	</logger>
 	
@@ -31,7 +36,7 @@
 	<logger name="org.springframework.web">
 		<level value="info" />
 	</logger>
-
+	
 	<!-- Root Logger -->
 	<root>
 		<priority value="warn" />

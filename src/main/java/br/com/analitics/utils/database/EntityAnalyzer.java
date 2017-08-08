@@ -1,4 +1,4 @@
-package br.com.analitics.utils;
+package br.com.analitics.utils.database;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;

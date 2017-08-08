@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 import br.com.analitics.model.Campeao;
 import br.com.analitics.repository.CampeaoRepository;
-import br.com.analitics.utils.ResourceException;
+import br.com.analitics.utils.exception.ResourceException;
 import br.com.analitics.vo.CampeaoListaVO;
 
 @Service
@@ -21,6 +21,7 @@ public class CampeaoBusiness {
 		if (campeao == null) {
         	throw new ResourceException(HttpStatus.NOT_FOUND, "Não existe campeão cadastrado com esse ID");
         }
+//		Messager.getMessage("area.campanha.notification.erro.ao.buscar");
 		return campeao;
 	}
 

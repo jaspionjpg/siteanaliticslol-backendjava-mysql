@@ -1,4 +1,4 @@
-package br.com.analitics.utils;
+package br.com.analitics.utils.exception;
 
 import org.springframework.http.HttpStatus;
 
