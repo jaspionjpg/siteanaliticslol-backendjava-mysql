@@ -1,6 +1,8 @@
-package br.com.analitics.vo;
+package br.com.analitics.vo.campeao;
 
 import java.util.List;
+
+import br.com.analitics.vo.jogador.JogadorResumoCampeaoVO;
 
 public class CampeaoResumoVO {
 	private Long id;
@@ -9,23 +11,27 @@ public class CampeaoResumoVO {
 	private String titulo;
 	private String chave;
 	
-	private Double taxaVitoria;
-	private Double taxaBan;
-	private Double taxaPick;
+	private Double jogosGanhos;
+	private Double kda;
+	private Double partidas;
 	
 	private List<JogadorResumoCampeaoVO> jogadoresCampeao;
 	
 	public CampeaoResumoVO() {
 	}
 
-	public CampeaoResumoVO(Long id, String nome, String titulo, Double taxaVitoria, Double taxaBan, Double taxaPick,
+	public CampeaoResumoVO(Long id, String nome, String titulo, Long numeroVitorias, Double kda, Long partidas,
 			String chave) {
 		this.id = id;
 		this.nome = nome;
 		this.titulo = titulo;
-		this.taxaVitoria = taxaVitoria;
-		this.taxaBan = taxaBan;
-		this.taxaPick = taxaPick;
+		this.kda = kda;
+		if(partidas == 0) {
+			jogosGanhos = 0d; 
+			this.kda = 0d;
+		}
+		else this.jogosGanhos = numeroVitorias.doubleValue();
+		this.partidas = partidas.doubleValue();
 		this.chave = chave;
 	}
 	
@@ -41,16 +47,16 @@ public class CampeaoResumoVO {
 		return titulo;
 	}
 	
-	public Double getTaxaVitoria() {
-		return taxaVitoria;
+	public Double getJogosGanhos() {
+		return jogosGanhos;
 	}
 	
-	public Double getTaxaBan() {
-		return taxaBan;
+	public Double getKda() {
+		return kda;
 	}
 	
-	public Double getTaxaPick() {
-		return taxaPick;
+	public Double getPartidas() {
+		return partidas;
 	}
 	
 	public String getChave() {
@@ -73,16 +79,16 @@ public class CampeaoResumoVO {
 		this.titulo = titulo;
 	}
 	
-	public void setTaxaVitoria(Double taxaVitoria) {
-		this.taxaVitoria = taxaVitoria;
+	public void setJogosGanhos(Double jogosGanhos) {
+		this.jogosGanhos = jogosGanhos;
 	}
 	
-	public void setTaxaBan(Double taxaBan) {
-		this.taxaBan = taxaBan;
+	public void setKda(Double kda) {
+		this.kda = kda;
 	}
 	
-	public void setTaxaPick(Double taxaPick) {
-		this.taxaPick = taxaPick;
+	public void setPartidas(Double partidas) {
+		this.partidas = partidas;
 	}
 	
 	public void setChave(String chave) {
@@ -95,8 +101,8 @@ public class CampeaoResumoVO {
 
 	@Override
 	public String toString() {
-		return "CampeaoResumoVO [id=" + id + ", nome=" + nome + ", titulo=" + titulo + ", taxaVitoria=" + taxaVitoria
-				+ ", taxaBan=" + taxaBan + ", taxaPick=" + taxaPick + ", chave=" + chave + ", jogadoresCampeao="
+		return "CampeaoResumoVO [id=" + id + ", nome=" + nome + ", titulo=" + titulo + ", chave=" + chave
+				+ ", jogosGanhos=" + jogosGanhos + ", kda=" + kda + ", partidas=" + partidas + ", jogadoresCampeao="
 				+ jogadoresCampeao + "]";
 	}
 }

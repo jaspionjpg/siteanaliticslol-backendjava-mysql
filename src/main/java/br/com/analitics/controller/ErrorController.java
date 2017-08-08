@@ -4,7 +4,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
 import br.com.analitics.utils.exception.ResourceException;
-import br.com.analitics.vo.ErrorVO;
+import br.com.analitics.vo.outros.ErrorVO;
 
 @org.springframework.web.bind.annotation.ControllerAdvice
 public class ErrorController {

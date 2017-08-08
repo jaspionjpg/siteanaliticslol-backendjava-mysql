@@ -1,4 +1,4 @@
-package br.com.analitics.vo;
+package br.com.analitics.vo.campeao;
 
 public class CampeaoListaVO {
 	private Long id;

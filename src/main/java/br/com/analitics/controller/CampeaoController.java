@@ -13,7 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.analitics.business.CampeaoBusiness;
 import br.com.analitics.model.Campeao;
-import br.com.analitics.vo.CampeaoListaVO;
+import br.com.analitics.vo.campeao.CampeaoListaVO;
+import br.com.analitics.vo.campeao.CampeaoResumoVO;
 
 @Controller
 @RestController
@@ -30,9 +31,14 @@ public class CampeaoController {
 	}
 	
 	@ResponseStatus(value = HttpStatus.OK)
+	@RequestMapping(value = "resumo/{id}", method = RequestMethod.GET)
+	public CampeaoResumoVO findAllLista(@PathVariable("id") int idRito) {
+		return campeaoBusiness.findResumoByIdRito(idRito);
+	}
+	
+	@ResponseStatus(value = HttpStatus.OK)
 	@RequestMapping(value = "lista", method = RequestMethod.GET)
 	public List<CampeaoListaVO> findAllLista() {
 		return campeaoBusiness.findAllLista();
 	}
-
 }

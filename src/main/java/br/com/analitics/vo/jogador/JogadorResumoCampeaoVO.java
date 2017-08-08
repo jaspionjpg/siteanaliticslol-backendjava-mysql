@@ -1,4 +1,4 @@
-package br.com.analitics.vo;
+package br.com.analitics.vo.jogador;
 
 public class JogadorResumoCampeaoVO {
 	private Long id;
@@ -7,104 +7,105 @@ public class JogadorResumoCampeaoVO {
 	private String chave;
 	
 	private Double kda;
-	private Integer kill;
-	private Integer morte;
-	private Integer assistencia;
-	private Integer jogosEscolha;
-	private Double taxaWin;
+	private Double kill;
+	private Double morte;
+	private Double assistencia;
+	private Long jogosEscolha;
+	private Long jogosGanhos;
 	
 	public JogadorResumoCampeaoVO() {
 	}
 	
-	public JogadorResumoCampeaoVO(Long id, String nome, String chave, Double kda, Integer kill, Integer morte,
-			Integer assistencia, Integer jogosEscolha, Double taxaWin) {
+	public JogadorResumoCampeaoVO(Long id, String nome, String chave, Double kda, Double kill, Double morte,
+			Double assistencia, Long jogosEscolha, Long taxaWin) {
 		this.id = id;
 		this.nome = nome;
 		this.chave = chave;
-		this.kda = kda;
+		if(kda != null) this.kda = kda;
+		else this.kda = kill + assistencia;
 		this.kill = kill;
 		this.morte = morte;
 		this.assistencia = assistencia;
 		this.jogosEscolha = jogosEscolha;
-		this.taxaWin = taxaWin;
+		this.jogosGanhos = taxaWin;
 	}
-
+	
 	public Long getId() {
 		return id;
 	}
-	
+
 	public String getNome() {
 		return nome;
 	}
-	
+
 	public String getChave() {
 		return chave;
 	}
-	
+
 	public Double getKda() {
 		return kda;
 	}
-	
-	public Integer getKill() {
+
+	public Double getKill() {
 		return kill;
 	}
-	
-	public Integer getMorte() {
+
+	public Double getMorte() {
 		return morte;
 	}
-	
-	public Integer getAssistencia() {
+
+	public Double getAssistencia() {
 		return assistencia;
 	}
-	
-	public Integer getJogosEscolha() {
+
+	public Long getJogosEscolha() {
 		return jogosEscolha;
 	}
-	
-	public Double getTaxaWin() {
-		return taxaWin;
+
+	public Long getJogosGanhos() {
+		return jogosGanhos;
 	}
-	
+
 	public void setId(Long id) {
 		this.id = id;
 	}
-	
+
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	
+
 	public void setChave(String chave) {
 		this.chave = chave;
 	}
-	
+
 	public void setKda(Double kda) {
 		this.kda = kda;
 	}
-	
-	public void setKill(Integer kill) {
+
+	public void setKill(Double kill) {
 		this.kill = kill;
 	}
-	
-	public void setMorte(Integer morte) {
+
+	public void setMorte(Double morte) {
 		this.morte = morte;
 	}
-	
-	public void setAssistencia(Integer assistencia) {
+
+	public void setAssistencia(Double assistencia) {
 		this.assistencia = assistencia;
 	}
-	
-	public void setJogosEscolha(Integer jogosEscolha) {
+
+	public void setJogosEscolha(Long jogosEscolha) {
 		this.jogosEscolha = jogosEscolha;
 	}
-	
-	public void setTaxaWin(Double taxaWin) {
-		this.taxaWin = taxaWin;
+
+	public void setJogosGanhos(Long jogosGanhos) {
+		this.jogosGanhos = jogosGanhos;
 	}
 
 	@Override
 	public String toString() {
 		return "JogadorResumoCampeaoVO [id=" + id + ", nome=" + nome + ", chave=" + chave + ", kda=" + kda + ", kill="
 				+ kill + ", morte=" + morte + ", assistencia=" + assistencia + ", jogosEscolha=" + jogosEscolha
-				+ ", taxaWin=" + taxaWin + "]";
+				+ ", jogosGanhos=" + jogosGanhos + "]";
 	}
 }
